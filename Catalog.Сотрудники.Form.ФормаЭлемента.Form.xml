@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Стандартные" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтандартныеРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<InputField name="Наименование" id="8">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<InputField name="Код" id="5">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="7"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="Фамилия" id="11">
+					<DataPath>Объект.Фамилия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФамилияКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="13"/>
+					<Events>
+						<Event name="OnChange">ФамилияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Имя" id="16">
+					<DataPath>Объект.Имя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИмяКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ИмяПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Отчество" id="19">
+					<DataPath>Объект.Отчество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтчествоКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">ОтчествоПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Прочие" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПрочиеРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="ТабельныйНомер" id="27">
+					<DataPath>Объект.ТабельныйНомер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельныйНомерКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ТабельныйНомерРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<InputField name="ДатаРождения" id="22">
+					<DataPath>Объект.ДатаРождения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрикрепленныйФайл" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прикрепленный файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прикрепленный файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрикрепленныйФайлРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<LabelDecoration name="ПрикрепленныйФайл" id="35">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прикрепить файл</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ПрикрепленныйФайлКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПрикрепленныйФайлРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="Click">ПрикрепленныйФайлНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="СохранитьФайл" id="38">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранить файл...</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="СохранитьФайлКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СохранитьФайлРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="Click">СохранитьФайлНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="УдалитьФайл" id="43">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить файл</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="УдалитьФайлКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="УдалитьФайлРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="Click">УдалитьФайлНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Сотрудники</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Стандартные" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтандартныеРасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<InputField name="Номер" id="5">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="7"/>
+				</InputField>
+				<InputField name="Дата" id="8">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="АктОтбора" id="11">
+							<DataPath>Объект.АктОтбора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="АктОтбораКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="АктОтбораРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">АктОтбораПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДатаВремяОтбора" id="22">
+							<DataPath>Объект.ДатаВремяОтбора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаВремяОтбораКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДатаВремяОтбораРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="ВидТоплива" id="14">
+							<DataPath>Объект.ВидТоплива</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВидТопливаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ВидТопливаРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="НормативныйДокумент" id="19">
+							<DataPath>Объект.НормативныйДокумент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НормативныйДокументКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="НормативныйДокументРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<CheckBoxField name="ИспытанияЗавершены" id="25">
+							<DataPath>Объект.ИспытанияЗавершены</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспытанияЗавершеныКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ИспытанияЗавершеныРасширеннаяПодсказка" id="27"/>
+							<Events>
+								<Event name="OnChange">ИспытанияЗавершеныПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="ГруппаРезультатыИспытаний" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результаты испытаний</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРезультатыИспытанийРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="РезультатыИспытаний" id="32">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РезультатыИспытаний</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РезультатыИспытанийКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="РезультатыИспытанийКоманднаяПанель" id="34">
+								<ChildItems>
+									<Popup name="Заполнить" id="98">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="99"/>
+										<ChildItems>
+											<Button name="ПоПрограммеИспытаний" id="100">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПоПрограммеИспытаний</CommandName>
+												<ExtendedTooltip name="ПоПрограммеИспытанийРасширеннаяПодсказка" id="101"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РезультатыИспытанийРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="РезультатыИспытанийСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>РезультатыИспытаний</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатыИспытанийСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="РезультатыИспытанийСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РезультатыИспытанийСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>РезультатыИспытаний</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатыИспытанийСостояниеПросмотраКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="РезультатыИспытанийСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РезультатыИспытанийУправлениеПоиском" id="42">
+								<AdditionSource>
+									<Item>РезультатыИспытаний</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатыИспытанийУправлениеПоискомКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="РезультатыИспытанийУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">РезультатыИспытанийПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РезультатыИспытанийНомерСтроки" id="45">
+									<DataPath>Объект.РезультатыИспытаний.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийНомерСтрокиКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="РезультатыИспытанийНомерСтрокиРасширеннаяПодсказка" id="47"/>
+								</LabelField>
+								<InputField name="РезультатыИспытанийПоказательКачества" id="48">
+									<DataPath>Объект.РезультатыИспытаний.ПоказательКачества</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийПоказательКачестваКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="РезультатыИспытанийПоказательКачестваРасширеннаяПодсказка" id="50"/>
+									<Events>
+										<Event name="OnChange">РезультатыИспытанийПоказательКачестваПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РезультатыИспытанийМетодИспытаний" id="51">
+									<DataPath>Объект.РезультатыИспытаний.МетодИспытаний</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийМетодИспытанийКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="РезультатыИспытанийМетодИспытанийРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="РезультатыИспытанийЕдиницаИзмерения" id="54">
+									<DataPath>Объект.РезультатыИспытаний.ЕдиницаИзмерения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийЕдиницаИзмеренияКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="РезультатыИспытанийЕдиницаИзмеренияРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="РезультатыИспытанийНорма" id="57">
+									<DataPath>Объект.РезультатыИспытаний.Норма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийНормаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="РезультатыИспытанийНормаРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="РезультатыИспытанийРезультатПоПаспорту" id="60">
+									<DataPath>Объект.РезультатыИспытаний.РезультатПоПаспорту</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийРезультатПоПаспортуКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="РезультатыИспытанийРезультатПоПаспортуРасширеннаяПодсказка" id="62"/>
+									<Events>
+										<Event name="OnChange">РезультатыИспытанийРезультатПоПаспортуПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РезультатыИспытанийРезультатПоИспытанию" id="63">
+									<DataPath>Объект.РезультатыИспытаний.РезультатПоИспытанию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыИспытанийРезультатПоИспытаниюКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="РезультатыИспытанийРезультатПоИспытаниюРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="OnChange">РезультатыИспытанийРезультатПоИспытаниюПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РезультатыИспытанийОборудование" id="66">
+									<DataPath>Объект.РезультатыИспытаний.Оборудование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="РезультатыИспытанийОборудованиеКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="РезультатыИспытанийОборудованиеРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<InputField name="РезультатыИспытанийСотрудник" id="69">
+									<DataPath>Объект.РезультатыИспытаний.Сотрудник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>true</DropListButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="РезультатыИспытанийСотрудникКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="РезультатыИспытанийСотрудникРасширеннаяПодсказка" id="71"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительнаяИнформация" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительнаяИнформацияРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<Table name="ДополнительнаяИнформация" id="74">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДополнительнаяИнформация</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="75"/>
+							<AutoCommandBar name="ДополнительнаяИнформацияКоманднаяПанель" id="76"/>
+							<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="77"/>
+							<SearchStringAddition name="ДополнительнаяИнформацияСтрокаПоиска" id="78">
+								<AdditionSource>
+									<Item>ДополнительнаяИнформация</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительнаяИнформацияСтрокаПоискаКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДополнительнаяИнформацияСостояниеПросмотра" id="81">
+								<AdditionSource>
+									<Item>ДополнительнаяИнформация</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительнаяИнформацияСостояниеПросмотраКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДополнительнаяИнформацияУправлениеПоиском" id="84">
+								<AdditionSource>
+									<Item>ДополнительнаяИнформация</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительнаяИнформацияУправлениеПоискомКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДополнительнаяИнформацияНомерСтроки" id="87">
+									<DataPath>Объект.ДополнительнаяИнформация.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительнаяИнформацияНомерСтрокиКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ДополнительнаяИнформацияНомерСтрокиРасширеннаяПодсказка" id="89"/>
+								</LabelField>
+								<InputField name="ДополнительнаяИнформацияВидИнформации" id="90">
+									<DataPath>Объект.ДополнительнаяИнформация.ВидИнформации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительнаяИнформацияВидИнформацииКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ДополнительнаяИнформацияВидИнформацииРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="ДополнительнаяИнформацияИнформация" id="93">
+									<DataPath>Объект.ДополнительнаяИнформация.Информация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительнаяИнформацияИнформацияКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ДополнительнаяИнформацияИнформацияРасширеннаяПодсказка" id="95"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РезультатыИспытаний</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоПрограммеИспытаний" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по программе испытаний</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по программе испытаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПрограммеИспытаний</Action>
+		</Command>
+	</Commands>
+</Form>
